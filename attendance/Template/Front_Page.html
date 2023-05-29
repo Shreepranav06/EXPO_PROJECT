@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load static %}
+{% csrf_token %}
+{% load embed_video_tags %}
+<html lang="en" dir="ltr">
+  <head>
+      <link rel="icon" href="static/django2/favicon.ico">
+    <meta charset="utf-8">
+    <title>Psg Itech</title>
+    <link rel="stylesheet" href="{ % static 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css' % }">
+    <link href="{% static 'Front_Page.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+  <video class="bg-video" src="{% static 'videos/pexels-armin-rimoldi-5551778 (1).mp4' %}" autoplay muted loop></video>
+  <div class="background-video">
+    {% video video_url %}
+</div>
+  <video autoplay loop muted>
+      <div className='overlay'>
+      </div>
+    <source src="{% static 'videos/pexels-armin-rimoldi-5551778(1).mp4' %}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+  <div class="container">
+      <div class="content">
+            <body id="bg" style="background-image: url('{% static 'img.jpg' %}')"; >
+            <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/4/43/Itechlogo.png" alt="">
+            <div class="jumbotron">
+                <h1 >PSG Institute of Technology And Applied Research</h1><br>
+                <p></p>
+                <h4>(Approved by AICTE,New Delhi | Affiliated to Anna University, Chennai)</h4>
+                <p>Avinash Road, Neelambur, Coimbatore - 641062</p>
+                <p></p>
+                <h1>I am a</h1><br>
+                <form class="" action="http://127.0.0.1:8000/teacher" method="post">
+                    {% load static %}
+                    {% csrf_token %}
+                    <input id="log" type="submit" name="" value="Teacher">
+                </form>
+              <form class="" action="http://127.0.0.1:8000/student" method="get">
+                  {% load static %}
+                  {% csrf_token %}
+                <input id="log1" type="submit" name="" value="Student">
+              </form>
+            </div>
+      </div>
+  </div>
+
+  </body>
+</html>

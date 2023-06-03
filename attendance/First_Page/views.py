@@ -11,3 +11,6 @@ def first(request):
     #video_url = 'https://youtu.be/AYcM_x0BJfA'
     #context = {'video_url': video_url}
     return render(request, 'Front_Page.html')
+
+def about(request):
+    return render(request, 'about.html')

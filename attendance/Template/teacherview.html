@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+{% load static %}
+{% csrf_token %}
+
+<html>
+  <head>
+    <title>Student Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    />
+    <link href="{% static 'student.css' %}" rel="stylesheet">
+  <style>
+
+    p {
+      font-size: 45px;
+    }
+    body {
+      background: url("");
+    }
+    #bc{
+  display: block;
+  top:50px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+  .jumbotron{
+  background-color:rgba(20, 142, 205, 0.3);
+  }
+  </style>
+  <body>
+
+    <img id="bc" src="{% static 'st.jpeg' %}" alt="">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+      <a class="navbar-brand" href="http://127.0.0.1:8000/">Home</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/admin"
+              >Admin<span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/mark">Marks</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/update_attendance">Period1</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/update_attendance_a">Period2</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/update_attendance_b">Period3</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Teacher Details</h1>
+        <p></p>
+        <p>WELCOME  {{ name }}</p>
+      </div>
+    </div>
+  </body>
+</html>

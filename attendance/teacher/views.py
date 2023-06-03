@@ -11,26 +11,20 @@ from .models import Teacher
 
 def teachers(request):
 
+
+
     if request.method == "POST":
-        nam = request.POST.get('name')
-        passwor = request.POST.get('password')
+        name = request.POST.get('name')
+        password = request.POST.get('password')
 
         try:
-            user = Teacher.objects.filter(name=nam, password=passwor).first()
-            if user is not None:
-
-                return redirect('http://127.0.0.1:8000/update_attendance/')
-                #return render(request,'details.html')
+            user = Teacher.objects.get(name = name, password = password)
 
 
-            else:
-                messages.error(request, 'User not found')
-        finally:
-            pass
+            return render(request, 'teacherview.html',{'name':user.name})
 
-
-
-
+        except Teacher.DoesNotExist:
+            return redirect('http://127.0.0.1:8000/teacher')
 
     return render(request, 'teacher.html')
 

@@ -145,3 +145,5 @@ EMAIL_HOST_USER = 'alumni.management.sys@gmail.com'
 EMAIL_HOST_PASSWORD = 'iyovwrjpfkxgajiu'
 EMAIL_TLS = True
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

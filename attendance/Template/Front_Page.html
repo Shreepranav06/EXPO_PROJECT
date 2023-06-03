@@ -9,33 +9,132 @@
     <title>Psg Itech</title>
     <link rel="stylesheet" href="{ % static 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css' % }">
     <link href="{% static 'Front_Page.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
   </head>
+  <style>
+  #logo{
+  height:100px;
+  width:80px;
+  position: fixed;left:1750px;top: 60px;
+}
 
+
+.jumbotron{
+  background-color:rgba(199,168,188,0.0);
+  font-size:25px;
+  text-align:center;
+  margin-left:160px;
+  margin-top:200px;
+  color:white;
+
+}
+.can{
+  text-align: center;
+  color: white;
+}
+#log{
+  border: 2px inset rgba(255,242,242,0.5);
+  background-color: rgba(146,138,138,0.5);
+  border-radius: 25px;
+  height:50px;
+  width: 120px;
+  margin-bottom: 3px;
+  margin-top:25px;
+  margin-right:550px;
+
+}
+#log1{
+  border: 2px inset rgba(255,242,242,0.5);
+  background-color: rgba(146,138,138,0.5);
+  border-radius: 25px;
+  height:50px;
+  width: 120px;
+  margin-bottom: 3px;
+
+}
+video {
+    position: fixed;
+    top: -30%;
+    right: -10%;
+    bottom:100%;
+    height:145%;
+    width:100%;
+
+
+}
+.content {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.0);
+  color: #f1f1f1;
+}
+.overlay {
+    position: fixed;
+    top: 1000%;
+    bottom: 2000%;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+  </style>
   <body>
-  <video class="bg-video" src="{% static 'videos/pexels-armin-rimoldi-5551778 (1).mp4' %}" autoplay muted loop></video>
-  <div class="background-video">
-    {% video video_url %}
-</div>
-  <video autoplay loop muted>
-      <div className='overlay'>
+    <nav class="navbar navbar-expand-lg navbar-light bg-rgba(255, 255, 255,0.2)">
+      <a class="navbar-brand" href="http://www.psgitech.ac.in/">Home</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/about/"
+              >About <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/bus/">Bus</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Canteen</a>
+          </li>
+        </ul>
       </div>
-    <source src="{% static 'videos/pexels-armin-rimoldi-5551778(1).mp4' %}" type="video/mp4">
-    Your browser does not support the video tag.
-</video>
+    </nav>
+ <video class="bg-video" src="{% static 'videos/Itech (1) (1).mp4' %}" autoplay muted loop></video>
+  <div class="background-video">
+      {% video video_url %}
+  </div>
+  <video autoplay loop muted>
+      <div className = 'overlay'>
+
+      </div>
+      <source src="{% static 'videos/Itech (1) (1).mp4' %}" type="video/mp4">
+      your browser does not support the video
+  </video>
   <div class="container">
       <div class="content">
             <body id="bg" style="background-image: url('{% static 'img.jpg' %}')"; >
             <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/4/43/Itechlogo.png" alt="">
             <div class="jumbotron">
                 <h1 >PSG Institute of Technology And Applied Research</h1><br>
-                <p></p>
+
                 <h4>(Approved by AICTE,New Delhi | Affiliated to Anna University, Chennai)</h4>
                 <p>Avinash Road, Neelambur, Coimbatore - 641062</p>
                 <p></p>
-                <h1>I am a</h1><br>
+                <p></p>
+                <p></p>
                 <form class="" action="http://127.0.0.1:8000/teacher" method="post">
                     {% load static %}
                     {% csrf_token %}
+                    <p></p>
                     <input id="log" type="submit" name="" value="Teacher">
                 </form>
               <form class="" action="http://127.0.0.1:8000/student" method="get">

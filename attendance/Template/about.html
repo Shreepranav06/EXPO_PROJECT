@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load static %}
+{% csrf_token %}
+<html>
+  <head>
+    <title>About PSGiTech</title>
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  </head>
+  <style>
+   body{
+ background : url("{% static 'bg2.jpeg' %}");
+ background-size:contain;
+ background-repeat:no-repeat;
+ width:2200px;
+ height:2200px;
+ }
+  .jumbotron{
+        background-color: rgba(225, 176, 176, 0.5);
+        margin-top:150px;
+        position:fixed;
+        margin-left:-250px;
+        height:400px;
+        margin-right:200px;
+      }
+
+
+
+  </style>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>About</h1>
+        <p>
+          PSG iTech, the latest initiative of PSG and Sons’ Charities, aims to
+          realize its objective of enhancing youth empowerment through technical
+          education. This institute caters to various engineering disciplines,
+          focusing on learning, industry engagement of students, innovative and
+          inclusive pedagogy, and ethics. PSG Institute of Technology and Applied
+          Research aims at effective transfer of knowledge, pursuit of truth and
+          moulding the students to become ideal citizens of the country. Within a
+          short span of time, the Institution has emerged to be one of the most
+          preferred institutions for the engineering aspirants in Tamilnadu. PSG
+          Institute of Technology and Applied Research, started in the year 2014, is
+          an AICTE approved institution and affiliated to Anna University, Chennai.
+          This institution is equipped with various Centres of Excellence such as
+          Innovation Centre, NI Graphical System Design Centre, Keysight RF circuit
+          & System Design Lab, Festo Lab, NEXMOO Mobile & IoT Centre of Excellence,
+          CISCO Network Academy and eYantra. PSGiTech aims to achieve excellence in
+          education and research and nurture engineers with ethics, who will face
+          global challenges to serve industry and society. Vision of the college To
+          achieve excellence in education and research, and nurture engineers with
+          ethics, who will face global challenges to serve industry and society.
+          Mission of the college To facilitate active learning and vocational
+          training. To encourage and promote questioning spirit and 'can-do'
+          entrepreneurial attitude. To foster industry - institute collaboration. To
+          ignite passion for creative work and selfless service towards a
+          sustainable world. To provide intellectually stimulating environment,
+          conducive for research.
+        </p>
+      </div>
+    </div>
+  </body>

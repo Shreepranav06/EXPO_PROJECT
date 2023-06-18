@@ -43,7 +43,7 @@
  }
  #sub{
     margin-top: 95px;
-    margin-left:945px;
+    margin-left:525px;
   }
   body{background:url("{% static 'teach.jpeg' %}");
   background-size:contain;
@@ -63,7 +63,7 @@
   padding: 0 30px 30px;
   color:#333;
   visibility: hidden;
-  transition: transform 0.7s, top 0.7s;
+  transition: transform 0.2s, top 0.2s;
 }
 .popup img{
   width:100px;
@@ -96,38 +96,25 @@
   transform:translate(-50%,-50%)scale(1);
 }
 
-  </style>
-<form method="POST" action="{% url 'update_attendance' %}">
+</style>
+<form method="POST" action="{% url 'mark3' %}">
   {% csrf_token %}
-    <h1>Math Attendance</h1>
-      <table>
-        <thead>
-          <th style="width: 15%">Name</th>
-          <th style="width: 15%">Absent</th>
-        </thead>
-        {% for student_name in student_names %}
-        <tr>
-          <td><label>{{ student_name }}</label></td>
-          <td><input type="checkbox" name="student_name" value="{{ student_name }}"></td>
-        </tr>
-        {% endfor %}
-      </table>
-      <button id="sub" name="" type="submit" class="win"onclick="openPopup()">submit</button>
-      <div class="popup" id="popup">
-        <img src="C:\Users\hp\Downloads\404-tick.png" alt="">
-        <h2>Thank You!</h2>
-        <p>Email has been sent successfully!</p>
-        <button type="button" onclick="closePopup()">OK</button>
-      </div>
-    <script>
-      let popup=document.getElementById("popup");
-      function openPopup(){
-        popup.classList.add("open-popup")
-      }
-      function closePopup(){
-        popup.classList.remove("open-popup")
-      }
-      </script>
+  <div class="container">
+    <h1>PHYSICS MARK ENTRY</h1>
+    <table>
+      <thead>
+        <th style="width: 15%">Name</th>
+        <th style="width: 15%">MARK</th>
+      </thead>
+      {% for student in students %}
+      <tr>
+        <td>{{ student.student_name }}</td>
+        <td><input type="number"  step= "0.1" name="physics_mark_{{ student.id }}" value="{{ student.physics_mark}}"></td>
+      </tr>
+      {% endfor %}
+    </table>
+    <button id="sub" name="" type="submit" class="win">submit</button>
+
     </form>
     </div>
 </div>

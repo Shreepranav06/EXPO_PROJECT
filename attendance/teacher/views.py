@@ -10,9 +10,6 @@ from .models import Teacher
 
 
 def teachers(request):
-
-
-
     if request.method == "POST":
         name = request.POST.get('name')
         password = request.POST.get('password')
@@ -21,7 +18,7 @@ def teachers(request):
             user = Teacher.objects.get(name = name, password = password)
 
 
-            return render(request, 'teacherview.html',{'name':user.name})
+            return render(request, 'teacherview.html',{'name':user.name,'img_url': user.img.url,'sp': user.Specialization})
 
         except Teacher.DoesNotExist:
             return redirect('http://127.0.0.1:8000/teacher')

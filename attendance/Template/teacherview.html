@@ -52,26 +52,35 @@
               >Admin<span class="sr-only">(current)</span></a
             >
           </li>
+
           <li class="nav-item active">
-            <a class="nav-link" href="http://127.0.0.1:8000/mark">Marks</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/update_attendance">Math Attendance</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="http://127.0.0.1:8000/update_attendance">Period1</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/update_attendance_a">Python Attendance</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="http://127.0.0.1:8000/update_attendance_a">Period2</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/update_attendance_b">Physics Attendance</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="http://127.0.0.1:8000/update_attendance_b">Period3</a>
+            <a class="nav-link" href="http://127.0.0.1:8000/mark1">Math mark</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/mark2">Python mark</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/mark3">Physics mark</a>
           </li>
         </ul>
       </div>
     </nav>
     <div class="container">
       <div class="jumbotron">
+        <img id="pic" src="{{ img_url }}" alt="Student Image">
         <h1>Teacher Details</h1>
         <p></p>
         <p>WELCOME  {{ name }}</p>
+        <p><p>SPECIALIZATION:   {{ sp }}</p>
       </div>
     </div>
   </body>

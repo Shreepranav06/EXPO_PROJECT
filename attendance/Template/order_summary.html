@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+{% csrf_token %}
+<html>
+<head>
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<style>
+    table{
+    margin-left:390px;
+    }
+    h1{
+    text-align:center;
+    }
+body{
+ background-color:white;
+}
+.jumbotron{
+position:relative;
+  background-color:black;
+  text-align:center;
+
+
+}
+</style>
+<body>
+<div class="container">
+    <div class="jumbotron">
+    <h1>Order Summary</h1>
+    <table>
+        <tr>
+            <th>S.No.</th>
+            <th>Food Item</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Quantity</th>
+
+        </tr>
+        {% for food_item in food_items %}
+        <tr>
+            <td>{{ food_item.sno }}</td>
+            <td>{{ food_item.food_item }}</td>
+            <td><img src="{{ food_item.img.url }}" alt="{{ food_item.food_item }}" width="100" height="100"></td>
+            <td>{{ food_item.price }}</td>
+            <td>{{ food_item.quanity }}</td>
+        </tr>
+
+        {% endfor %}
+        <tr>
+            <td colspan="5" style="text-align: right;"><strong>Total Price:</strong></td>
+            <td>{{ total_price }}</td>
+        </tr>
+    </table>
+    </div>
+</div>
+</body>
+</html>

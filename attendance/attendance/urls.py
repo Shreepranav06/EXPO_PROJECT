@@ -41,9 +41,28 @@ from details.views import update_attendance_b
 
 from details.views import mark
 
-from details.views import bus
+from details.views import bus_view
 
 from First_Page.views import about
+
+
+from canteen.views import canteen_login
+
+from details.views import mark1
+
+from details.views import mark2
+
+from details.views import mark3
+
+from canteen.views import food_order
+
+from canteen.views import summary
+
+
+from details.views import  get_current_location
+
+
+
 
 
 
@@ -62,8 +81,15 @@ urlpatterns = [
     path('update_attendance_a/', update_attendance_a, name='update_attendance_a'),
     path('update_attendance_b/', update_attendance_b, name='update_attendance_b'),
     path('mark/', mark, name='mark'),
-    path('bus/', bus, name='bus'),
+    path('bus_view/', bus_view, name='bus_view'),
     path('about/', about, name='about'),
+    path('canteen', canteen_login, name='canteen'),
+    path('mark1/', mark1, name='mark1'),
+    path('mark2/', mark2, name='mark2'),
+    path('mark3/', mark3, name='mark3'),
+    path('order/', food_order, name='food_order'),
+    path('summary/', summary),
+    path('map/', get_current_location)
 
 ]
 

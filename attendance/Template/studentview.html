@@ -21,7 +21,9 @@ font-family: 'Rajdhani', sans-serif;
   <div class="container">
   <div class="content">
     <div class="jumbotron">
-      <img id="pic"src="{% static 'ph.jpeg' %}" alt="">
+      <img id="pic" src="{{ img_url }}" alt="Student Image">
+
+
 
 
     <h1 class="one">Student Details</h1>
@@ -31,6 +33,9 @@ font-family: 'Rajdhani', sans-serif;
     <h2 class="one">Math attendance percentage : {{ p1 }}</h2>
     <h2 class="one">Python attendance percentage : {{ p2 }}</h2>
     <h2 class="one">Physics attendance percentage: {{ p3 }}</h2>
+    <h2 class="one">Math mark: {{ mark1 }}</h2>
+    <h2 class="one">Python mark: {{ mark2 }}</h2>
+    <h2 class="one">Physics mark: {{ mark3 }}</h2>
     <h2 class="one">CGPA : {{ mark }}</h2>
     </div>
     </div>
